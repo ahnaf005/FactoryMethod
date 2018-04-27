@@ -15,6 +15,22 @@ class CoffeeA implements Coffee{
         System.out.println("Milk,caffein,suger added");
     }
 }
+class CoffeeB implements Coffee{
+    @Override
+    public void prepare()
+    {
+        System.out.println("Inside CoffeeB");
+        System.out.println("Milk,caffein added.No Suger");
+    }
+}
+class CoffeeC implements Coffee{
+    @Override
+    public void prepare()
+    {
+        System.out.println("Inside CoffeeC");
+        System.out.println("Milk,caffein,suger added");
+    }
+}
 public class FactoryMethod {
     public static void main(String[] args) {
         
