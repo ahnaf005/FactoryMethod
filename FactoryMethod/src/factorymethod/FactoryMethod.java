@@ -4,6 +4,9 @@
  * and open the template in the editor.
  */
 package factorymethod;
+
+import java.util.Scanner;
+
 interface Coffee{
     public void prepare();
 }
@@ -45,7 +48,15 @@ class CoffeeFactory{
 }
 public class FactoryMethod {
     public static void main(String[] args) {
-        
+     Scanner input=new Scanner(System.in);
+     System.out.println("Type Choice:");
+     CoffeeFactory coffeefactory=new CoffeeFactory();
+     String a=input.next();
+     Coffee coffee=coffeefactory.ProduceCoffee(a);
+     if(coffee!=null)
+        coffee.prepare();
+     else
+        System.out.println("Wrong Keyword");
     }
     
 }
