@@ -5,7 +5,15 @@
  */
 package factorymethod;
 interface Coffee{
-    void prepare();
+    public void prepare();
+}
+class CoffeeA implements Coffee{
+    @Override
+    public void prepare()
+    {
+        System.out.println("Inside CoffeeA");
+        System.out.println("Milk,caffein,suger added");
+    }
 }
 public class FactoryMethod {
     public static void main(String[] args) {
