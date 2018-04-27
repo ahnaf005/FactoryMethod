@@ -31,6 +31,18 @@ class CoffeeC implements Coffee{
         System.out.println("Milk,caffein,suger added");
     }
 }
+class CoffeeFactory{
+    public Coffee ProduceCoffee(String Type)
+    {
+        if(Type.equals("CoffeeA"))
+            return new CoffeeA();
+        else if(Type.equals("CoffeeB"))
+            return new CoffeeB();
+        else if(Type.equals("CoffeeC"))
+            return new CoffeeC();
+        return null;
+    }
+}
 public class FactoryMethod {
     public static void main(String[] args) {
         
