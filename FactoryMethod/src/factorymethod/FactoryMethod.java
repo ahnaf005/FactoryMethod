@@ -35,7 +35,11 @@ class CoffeeC implements Coffee{
     }
 }
 class CoffeeFactory{
-    public Coffee ProduceCoffee(String Type)
+    private CoffeeFactory()
+    {
+        
+    }
+    public static Coffee ProduceCoffee(String Type)
     {
         if(Type.equals("CoffeeA"))
             return new CoffeeA();
@@ -50,9 +54,8 @@ public class FactoryMethod {
     public static void main(String[] args) {
      Scanner input=new Scanner(System.in);
      System.out.println("Type Choice:");
-     CoffeeFactory coffeefactory=new CoffeeFactory();
      String a=input.next();
-     Coffee coffee=coffeefactory.ProduceCoffee(a);
+     Coffee coffee=CoffeeFactory.ProduceCoffee(a);
      if(coffee!=null)
         coffee.prepare();
      else
